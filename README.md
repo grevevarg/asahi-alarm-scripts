@@ -28,13 +28,13 @@ supposed to be invoked in `~/.config/hypr/bindings.conf` if running omarchy.</br
 example configuration:
 
 ```
-bind = SUPER, C, exec, ~/scripts/smartcopypaste.sh copy $terminal
-bind = SUPER, V, exec, ~/scripts/smartcopypaste.sh paste $terminal
-bind = SUPER, X, exec, ~/scripts/smartcopypaste.sh cut $terminal
+bind = SUPER, C, exec, ~/scripts/smartcopypaste.sh copy $TERMINAL
+bind = SUPER, V, exec, ~/scripts/smartcopypaste.sh paste $TERMINAL
+bind = SUPER, X, exec, ~/scripts/smartcopypaste.sh cut $TERMINAL
 ```
 
-if you're not running omarchy you won't have `$terminal` defined and your configuration file might not be split up either.</br>
-if you would like to only define the name of the terminal once you can add `$terminal = nameofyourterminal` at the top of `hyprland.conf` or your custom keybind file to make sure its defined before the keybinds are actually loaded.</br>
+if you're not running omarchy you won't have `$TERMINAL` defined and your configuration file might not be split up either.</br>
+if you would like to only define the name of the terminal once you can add `$TERMINAL = nameofyourterminal` at the top of `hyprland.conf` or your custom keybind file to make sure its defined before the keybinds are actually loaded.</br>
 you can also be explicit like
 
 ```
