@@ -20,7 +20,11 @@ case "$action" in
   ;;
 esac
 
-if [[ $active_window == *"$term_class"* ]]; then
+if [[ ${active_window,,} == *${term_class,,}* ]]; then
+  # cut isnt supported in any terminal emus so just exit gracefully instead
+  if [[ $action == cut ]]
+    exit 0
+  fi
   shortcut="CTRL_SHIFT,$key,"
 else
   shortcut="CTRL,$key,"
